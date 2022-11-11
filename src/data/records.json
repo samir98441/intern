@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "image": "https://images.pexels.com/photos/8365688/pexels-photo-8365688.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "name": "bag",
+    "price": 50,
+    "rating": 4,
+    "quantity": 0,
+    "totalPrice": 0
+  },
+  {
+    "id": 2,
+    "image": "https://images.pexels.com/photos/1427984/pexels-photo-1427984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "name": "shorts",
+    "price": 90,
+    "rating": 3,
+    "quantity": 0,
+    "totalPrice": 0
+  },
+  {
+    "id": 3,
+    "image": "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "name": "hoodie",
+    "price": 106,
+    "rating": 5,
+    "quantity": 0,
+    "totalPrice": 0
+  },
+  {
+    "id": 4,
+    "image": "https://images.pexels.com/photos/1082528/pexels-photo-1082528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "name": "jeans",
+    "price": 88,
+    "rating": 2,
+    "quantity": 0,
+    "totalPrice": 0
+  }
+]

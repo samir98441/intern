@@ -1,0 +1,39 @@
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .container {
+    box-shadow: var(--box-shadow);
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    span {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--color-red);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .field {
+        input {
+          margin-top: 10px;
+          display: block;
+          padding: 5px 10px;
+        }
+        .errorMessage {
+          color: (var(--color-red));
+        }
+      }
+      label {
+      }
+      button {
+      }
+    }
+  }
+}

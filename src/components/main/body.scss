@@ -1,0 +1,36 @@
+.body {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  max-width: 100%;
+  .items {
+    box-shadow: var(--box-shadow);
+    &:hover {
+      transform: scale(1.1);
+      display: block;
+      .cart {
+        color: red;
+        display: block;
+      }
+    }
+    img {
+      width: 200px;
+      height: 200px;
+    }
+    .cart {
+      display: none;
+    }
+    .itemsDescription {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      gap: 10px;
+      .itemName {
+      }
+      .itemPrice {
+      }
+      .itemRatings {
+      }
+    }
+  }
+}
