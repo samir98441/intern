@@ -59,6 +59,16 @@
   .right {
     display: flex;
     gap: 20px;
+    .box {
+      position: relative;
+      .super {
+        position: absolute;
+        top: 0px;
+        right: -6px;
+        font-weight: 700;
+        color: red;
+      }
+    }
     .user {
       display: flex;
       align-items: center;

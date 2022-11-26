@@ -4,9 +4,9 @@
     "image": "https://images.pexels.com/photos/8365688/pexels-photo-8365688.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "name": "bag",
     "price": 50,
-    "rating": 4,
+    "rating": 2,
     "quantity": 0,
-    "totalPrice": 0
+    "totalPrice": 50
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "price": 90,
     "rating": 3,
     "quantity": 0,
-    "totalPrice": 0
+    "totalPrice": 90
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "price": 106,
     "rating": 5,
     "quantity": 0,
-    "totalPrice": 0
+    "totalPrice": 106
   },
   {
     "id": 4,
@@ -33,6 +33,6 @@
     "price": 88,
     "rating": 2,
     "quantity": 0,
-    "totalPrice": 0
+    "totalPrice": 88
   }
 ]

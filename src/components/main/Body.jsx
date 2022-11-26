@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import "./body.scss";
 import Data from "../../data/records.json";
@@ -16,13 +16,28 @@ function Body() {
     return stars;
   };
 
-  const cart = React.useContext(CartContext);
+  const { cart, setCart, setCartLength } = React.useContext(CartContext);
 
-  const addToCart = (records) => {
-    cart.push(records);
-    alert(`${records.name} added to cart`);
-    console.log(cart);
+  const addToCart = (product) => {
+    const productExists = cart.find((item) => item.id === product.id);
+    if (productExists) {
+      setCart(
+        cart.map((item) =>
+          item.id === product.id
+            ? {
+                ...productExists,
+                quantity: productExists.quantity + 1,
+              }
+            : item
+        )
+      );
+    } else {
+      setCart([...cart, { ...product, quantity: 1 }]);
+    }
   };
+  useEffect(() => {
+    setCartLength(cart.length);
+  }, [cart]);
 
   return (
     <div className="body">
@@ -38,7 +53,6 @@ function Body() {
                   addToCart(records);
                 }}
               />
-
               <div className="itemsDescription">
                 <span className="itemName">{records.name}</span>
                 <span className="itemPrice">${records.price}</span>

@@ -14,6 +14,7 @@ function Main() {
   const [mode, setMode] = useState(true);
   const [cart, setCart] = useState([]);
   const [displayCart, setDisplayCart] = useState(false);
+  const [cartLength, setCartLength] = useState(0);
 
   const onToggle = () => {
     theme === "light-theme" ? setTheme("dark-theme") : setTheme("light-theme");
@@ -21,11 +22,17 @@ function Main() {
   };
 
   return (
-    <CartContext.Provider value={cart}>
+    <CartContext.Provider value={{ cart, setCart, cartLength, setCartLength }}>
       <div className={theme}>
         <div className="navbar">
           <div className="left">
-            <Link to="/main" style={{ textDecoration: "none" }}>
+            <Link
+              to="/main"
+              style={{ textDecoration: "none" }}
+              onClick={() =>
+                displayCart ? setDisplayCart(false) : displayCart
+              }
+            >
               <span>AmaZon.c0m</span>
             </Link>
 
@@ -41,12 +48,14 @@ function Main() {
           </div>
 
           <div className="right">
-            <ShoppingCartOutlinedIcon
-              onClick={() => {
-                displayCart ? setDisplayCart(false) : setDisplayCart(true);
-              }}
-            />
-
+            <div className="box">
+              <ShoppingCartOutlinedIcon
+                onClick={() => {
+                  displayCart ? setDisplayCart(false) : setDisplayCart(true);
+                }}
+              />
+              <sup className="super">{cartLength}</sup>
+            </div>
             <div className="user">
               <img
                 src="https://images.pexels.com/photos/214574/pexels-photo-214574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"

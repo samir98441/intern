@@ -32,55 +32,58 @@ function Login() {
   });
   return (
     <>
-      {loggedin ? <Main /> : null}
-      <div className="login">
-        <div className="container">
-          <span>Login</span>
-          <form onSubmit={formik.handleSubmit}>
-            <div className="field">
-              <label>
-                Email:
-                <input
-                  type="email"
-                  placeholder="Enter your Email"
-                  name="email"
-                  id="email"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.email}
-                />
-              </label>
-              {formik.touched.email && formik.errors.email ? (
-                <div className="errorMessage">{formik.errors.email}</div>
-              ) : null}
+      {loggedin ? (
+        <Main />
+      ) : (
+        <div className="login">
+          <div className="container">
+            <span>Login</span>
+            <form onSubmit={formik.handleSubmit}>
+              <div className="field">
+                <label>
+                  Email:
+                  <input
+                    type="email"
+                    placeholder="Enter your Email"
+                    name="email"
+                    id="email"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.email}
+                  />
+                </label>
+                {formik.touched.email && formik.errors.email ? (
+                  <div className="errorMessage">{formik.errors.email}</div>
+                ) : null}
+              </div>
+              <div className="field">
+                <label>
+                  Password:
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Enter your Password"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.password}
+                  />
+                </label>
+                {formik.touched.password && formik.errors.password ? (
+                  <div className="errorMessage">{formik.errors.password}</div>
+                ) : null}
+              </div>
+              <button type="submit">Login</button>
+            </form>
+            <div>
+              <p>Dont have an account? </p>
+              <Link to="/register">
+                <button className="registerButton">Register</button>
+              </Link>
             </div>
-            <div className="field">
-              <label>
-                Password:
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="Enter your Password"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.password}
-                />
-              </label>
-              {formik.touched.password && formik.errors.password ? (
-                <div className="errorMessage">{formik.errors.password}</div>
-              ) : null}
-            </div>
-            <button type="submit">Login</button>
-          </form>
-          <div>
-            <p>Dont have an account? </p>
-            <Link to="/register">
-              <button className="registerButton">Register</button>
-            </Link>
           </div>
         </div>
-      </div>
+      )}
     </>
   );
 }
